@@ -169,30 +169,19 @@ float CosineSimilarity4096(const float* a, const float* b)
 
     return Dot(a, b, N) / (na * nb);
 }
+```cpp
 
-
-Open questions (the real research)
-
+**Open questions (the real research)**
 Which layers yield the most stable “knowledge coordinates” for a given model family
-
 How to prevent injection from becoming brittle prompt-hacking in disguise
-
 How to represent relations robustly without exploding drift across hops
-
 How to compare modules across checkpoints or quantization variants
-
 When weight edits beat runtime steering, and when they are dangerous
-
 How to make provenance, trust, and reproducibility first-class
 
-Roadmap (direction, not promises)
-
+**Roadmap (direction, not promises)**
 A minimal module format for concept vectors + relation deltas
-
 A routing policy with confidence and fallback logic
-
 A runtime injection interface with toggles and metrics
-
 Benchmarks that measure “knowledge patch impact” under perturbations
-
 A small zoo of modules that demonstrate compositional behavior

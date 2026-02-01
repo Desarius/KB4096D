@@ -6,9 +6,14 @@ Modern LLMs can *sound* knowledgeable while being structurally hard to update, a
 
 **KB4096D** is a proposal: treat knowledge as **native activations** and build a modular, shareable knowledge base directly inside a **4096-dimensional latent space**.
 
-Not a library. Not a product. A direction.
+Not a library. Not a product. An exploration.
 
 ---
+
+### What Currently Works
+Everything here works for TinyLlama and Llama 3.2; we can read and modify “knowledge” directly within each model. I am limited by hardware and can't test the same things on more complex models, but I am sure this will work.
+I need more GPU power and RAM to test with more advanced models, but the base is the same.
+
 
 ### The hypothesis
 If a model consistently represents meaning inside a stable latent space, then knowledge can be:
@@ -19,7 +24,7 @@ If a model consistently represents meaning inside a stable latent space, then kn
 - **injected** at runtime, reversibly
 - **shared** as compact `.pt` modules between users of the same base model
 
-KB4096D explores that hypothesis with a very explicit constraint:
+KB4096D explores and works on that hypothesis with a very explicit constraint:
 
 > Knowledge artifacts must be readable, composable, and operable in 4096D.
 
@@ -43,7 +48,7 @@ KB4096D rejects the idea that “knowledge” is best expressed as a paragraph.
 Instead, KB4096D treats knowledge as:
 - **vectors** (activation patterns)
 - **relations** (directions and deltas)
-- **clusters** (centroids and neighborhoods)
+- **clusters** (centroids and neighbourhoods)
 - **routes** (which modules matter right now)
 - **interventions** (runtime biasing or weight edits)
 
@@ -169,7 +174,7 @@ float CosineSimilarity4096(const float* a, const float* b)
 
     return Dot(a, b, N) / (na * nb);
 }
-```cpp
+```
 
 **Open questions (the real research)**
 Which layers yield the most stable “knowledge coordinates” for a given model family

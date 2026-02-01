@@ -14,6 +14,7 @@ Not a library. Not a product. An exploration.
 Everything here works for TinyLlama and Llama 3.2; we can read and modify “knowledge” directly within each model. I am limited by hardware and can't test the same things on more complex models, but I am sure this will work.
 I need more GPU power and RAM to test with more advanced models, but the base is the same.
 
+Current status: https://github.com/Desarius/KB4096D/blob/main/CurrentStatus.md
 
 ### The hypothesis
 If a model consistently represents meaning inside a stable latent space, then knowledge can be:

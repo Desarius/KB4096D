@@ -1,5 +1,5 @@
 # KB4096D
-## A research manifesto for knowledge that lives where the model thinks
+## A personal research manifesto for knowledge that lives where the model thinks
 
 ### Why this exists
 Modern LLMs can *sound* knowledgeable while being structurally hard to update, audit, or share. Most “knowledge” workflows still force everything through text: prompts, documents, summaries, chains of thought. But the model does not *think* in text. It thinks in **hidden states**.

@@ -1,5 +1,5 @@
 # KB4096D
-## A personal research manifesto for knowledge that lives where the model thinks
+## A personal research experiment for knowledge that lives where the model thinks
 
 ### Why this exists
 Modern LLMs can *sound* knowledgeable while being structurally hard to update, audit, or share. Most “knowledge” workflows still force everything through text: prompts, documents, summaries, chains of thought. But the model does not *think* in text. It thinks in **hidden states**.
@@ -178,16 +178,30 @@ float CosineSimilarity4096(const float* a, const float* b)
 ```
 
 **Open questions (the real research)**
+
 Which layers yield the most stable “knowledge coordinates” for a given model family
+
 How to prevent injection from becoming brittle prompt-hacking in disguise
+
 How to represent relations robustly without exploding drift across hops
+
 How to compare modules across checkpoints or quantization variants
+
 When weight edits beat runtime steering, and when they are dangerous
+
 How to make provenance, trust, and reproducibility first-class
 
+Could we make a full AI and grow it only from multiple *.pt files
+
 **Roadmap (direction, not promises)**
+
 A minimal module format for concept vectors + relation deltas
+
 A routing policy with confidence and fallback logic
+
 A runtime injection interface with toggles and metrics
+
 Benchmarks that measure “knowledge patch impact” under perturbations
+
 A small zoo of modules that demonstrate compositional behavior
+
